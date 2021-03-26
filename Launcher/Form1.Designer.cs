@@ -33,13 +33,12 @@ namespace Launcher
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainWindow));
             this.mainPnl = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnFrInject = new System.Windows.Forms.Button();
-            this.titleLbl = new System.Windows.Forms.Label();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.verLbl = new System.Windows.Forms.Label();
             this.btnInject = new System.Windows.Forms.Button();
-            this.btnLogin = new System.Windows.Forms.Button();
+            this.verLbl = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.titleLbl = new System.Windows.Forms.Label();
+            this.btnFrInject = new System.Windows.Forms.Button();
             this.mainPnl.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -52,13 +51,40 @@ namespace Launcher
             this.mainPnl.Controls.Add(this.btnInject);
             this.mainPnl.Location = new System.Drawing.Point(0, 0);
             this.mainPnl.Name = "mainPnl";
-            this.mainPnl.Size = new System.Drawing.Size(317, 179);
+            this.mainPnl.Size = new System.Drawing.Size(314, 172);
             this.mainPnl.TabIndex = 0;
+            // 
+            // btnInject
+            // 
+            this.btnInject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnInject.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInject.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnInject.FlatAppearance.BorderSize = 0;
+            this.btnInject.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnInject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInject.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.btnInject.Location = new System.Drawing.Point(17, 114);
+            this.btnInject.Name = "btnInject";
+            this.btnInject.Size = new System.Drawing.Size(170, 40);
+            this.btnInject.TabIndex = 2;
+            this.btnInject.Text = "Inject into GTA V";
+            this.btnInject.UseVisualStyleBackColor = false;
+            this.btnInject.Click += new System.EventHandler(this.btnInject_Click);
+            // 
+            // verLbl
+            // 
+            this.verLbl.AutoSize = true;
+            this.verLbl.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.verLbl.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.verLbl.Location = new System.Drawing.Point(14, 84);
+            this.verLbl.Name = "verLbl";
+            this.verLbl.Size = new System.Drawing.Size(171, 14);
+            this.verLbl.TabIndex = 3;
+            this.verLbl.Text = "Tims Pro Menu [unknown Version]";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.btnFrInject);
             this.panel1.Controls.Add(this.titleLbl);
             this.panel1.Controls.Add(this.btnClose);
@@ -69,33 +95,6 @@ namespace Launcher
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
-            // 
-            // btnFrInject
-            // 
-            this.btnFrInject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnFrInject.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFrInject.FlatAppearance.BorderSize = 0;
-            this.btnFrInject.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnFrInject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFrInject.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.btnFrInject.Location = new System.Drawing.Point(98, 40);
-            this.btnFrInject.Name = "btnFrInject";
-            this.btnFrInject.Size = new System.Drawing.Size(75, 21);
-            this.btnFrInject.TabIndex = 2;
-            this.btnFrInject.Text = "Injection";
-            this.btnFrInject.UseVisualStyleBackColor = false;
-            this.btnFrInject.Click += new System.EventHandler(this.btnFrInject_Click);
-            // 
-            // titleLbl
-            // 
-            this.titleLbl.AutoSize = true;
-            this.titleLbl.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleLbl.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.titleLbl.Location = new System.Drawing.Point(14, 13);
-            this.titleLbl.Name = "titleLbl";
-            this.titleLbl.Size = new System.Drawing.Size(173, 18);
-            this.titleLbl.TabIndex = 1;
-            this.titleLbl.Text = "Tims Pro Menu Injector";
             // 
             // btnClose
             // 
@@ -110,48 +109,32 @@ namespace Launcher
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.button1_Click);
             // 
-            // verLbl
+            // titleLbl
             // 
-            this.verLbl.AutoSize = true;
-            this.verLbl.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.verLbl.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.verLbl.Location = new System.Drawing.Point(14, 84);
-            this.verLbl.Name = "verLbl";
-            this.verLbl.Size = new System.Drawing.Size(171, 14);
-            this.verLbl.TabIndex = 3;
-            this.verLbl.Text = "Tims Pro Menu [unknown Version]";
+            this.titleLbl.AutoSize = true;
+            this.titleLbl.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleLbl.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.titleLbl.Location = new System.Drawing.Point(14, 13);
+            this.titleLbl.Name = "titleLbl";
+            this.titleLbl.Size = new System.Drawing.Size(173, 18);
+            this.titleLbl.TabIndex = 1;
+            this.titleLbl.Text = "Tims Pro Menu Injector";
             // 
-            // btnInject
+            // btnFrInject
             // 
-            this.btnInject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnInject.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnInject.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnInject.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnInject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInject.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.btnInject.Location = new System.Drawing.Point(17, 114);
-            this.btnInject.Name = "btnInject";
-            this.btnInject.Size = new System.Drawing.Size(170, 40);
-            this.btnInject.TabIndex = 2;
-            this.btnInject.Text = "Inject into GTA V";
-            this.btnInject.UseVisualStyleBackColor = false;
-            this.btnInject.Click += new System.EventHandler(this.btnInject_Click);
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogin.FlatAppearance.BorderSize = 0;
-            this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.btnLogin.Location = new System.Drawing.Point(17, 40);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(75, 21);
-            this.btnLogin.TabIndex = 3;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnFrInject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnFrInject.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFrInject.FlatAppearance.BorderSize = 0;
+            this.btnFrInject.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnFrInject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFrInject.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.btnFrInject.Location = new System.Drawing.Point(17, 40);
+            this.btnFrInject.Name = "btnFrInject";
+            this.btnFrInject.Size = new System.Drawing.Size(75, 21);
+            this.btnFrInject.TabIndex = 2;
+            this.btnFrInject.Text = "Injection";
+            this.btnFrInject.UseVisualStyleBackColor = false;
+            this.btnFrInject.Click += new System.EventHandler(this.btnFrInject_Click);
             // 
             // mainWindow
             // 
@@ -178,13 +161,12 @@ namespace Launcher
         #endregion
 
         private System.Windows.Forms.Panel mainPnl;
-        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label titleLbl;
-        private System.Windows.Forms.Button btnInject;
-        private System.Windows.Forms.Label verLbl;
         private System.Windows.Forms.Button btnFrInject;
-        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Label titleLbl;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Label verLbl;
+        private System.Windows.Forms.Button btnInject;
     }
 }
 
